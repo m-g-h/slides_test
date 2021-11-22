@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Research Proposal</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Martin Haas" />
+    <meta name="date" content="2021-09-17" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="LMU_style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Research Proposal
+## On Discerning Rectangularisation and Prolongation of Life Span in Human Ageing
+### Martin Haas
+### 2021-09-17
+
+---
+
+
+
+
+
+# The Roadmap
+1. Ageing in economic models: a motivation
+  - How models depend on realistic **representations of ageing**
+  - Research interest and idea
+2. Research project: 
+  - Theory: Incorporating and dissecting **realistic ageing**
+  - What are rectangularisation and prolongation?
+  - Empirical application
+
+---
+
+class: inverse, center, middle
+
+# Motivation
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=960px&gt;&lt;/html&gt; 
+
+Economic Models and Survival Data
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+Hazan (2009): "Prototype Ben-Porath Model" do determine:
+- Labour market entry `\(S\)`
+- Labour market exit `\(R\)`
+
+![](pictures/figure-1_timeline.png)
+
+--
+
+*Argument: "increased life expectancy will also increase lifetime labour supply"*
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+Hazan (2009): "Prototype Ben-Porath Model" do determine:
+- Labour market entry `\(S\)`
+- Labour market exit `\(R\)`
+
+![](pictures/figure-2_timeline_stretched.png)
+
+*Argument: "increased life expectancy will also increase lifetime labor supply"*
+
+
+--
+
+**Problem: This contradicted empirical findings**
+
+---
+
+# Empirical Facts
+
+.center[
+![:scale 70%](pictures/hazan_facts.PNG)
+]
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+.left-col[
+
+Cervellati &amp; Sunde (2013) showed why
+]
+
+.right-col[
+
+]
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+.left-col[
+
+Cervellati &amp; Sunde (2013) showed why
+
+Hazan(2009): rectangular survival law
+
+`$$\int_0^T 1\cdot e^{-\rho t} u(c(t)) dt - \int_0^R 1\cdot e^{-\rho t} f(t) dt$$`
+
+]
+
+.right-col[
+
+
+]
+
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+.left-col[
+
+Cervellati &amp; Sunde (2013) showed why
+
+Hazan(2009): rectangular survival law
+
+`$$\int_0^T 1\cdot e^{-\rho t} u(c(t)) dt - \int_0^R 1\cdot e^{-\rho t} f(t) dt$$`
+
+]
+
+.right-col[
+
+![](pictures/figure_motivation_1.1.svg)
+
+]
+
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+.left-col[
+
+Cervellati &amp; Sunde (2013) showed why
+
+Hazan(2009): rectangular survival law
+
+`$$\int_0^T 1\cdot e^{-\rho t} u(c(t)) dt - \int_0^R 1\cdot e^{-\rho t} f(t) dt$$`
+
+But `Survival Functions` are not **perfectly rectangular**
+
+`$$\int_0^T S(t)\cdot e^{-\rho t} u(c(t)) dt - \int_0^R S(t)\cdot e^{-\rho t} f(t) dt$$`
+
+]
+
+.right-col[
+
+![](pictures/figure_motivation_1.1.svg)
+
+]
+
+---
+
+# Illustrative Example: Ben-Porath Model
+
+.left-col[
+
+Cervellati &amp; Sunde (2013) showed why
+
+Hazan(2009): rectangular survival law
+
+`$$\int_0^T 1\cdot e^{-\rho t} u(c(t)) dt - \int_0^R 1\cdot e^{-\rho t} f(t) dt$$`
+
+But `Survival Functions` are not **perfectly rectangular**
+
+`$$\int_0^T S(t)\cdot e^{-\rho t} u(c(t)) dt - \int_0^R S(t)\cdot e^{-\rho t} f(t) dt$$`
+
+]
+
+.right-col[
+
+![](pictures/figure_motivation_1.2.svg)
+
+]
+
+---
+
+# Takeaways
+
+**This solved the problem**: a realistic `Survival Function` explained declining lifetime labour supply
+
+&lt;br&gt;
+--
+
+We can now implement `Survival Data` into economic models
+
+&lt;br&gt;
+--
+
+
+Previous research implemented *historical* `Survival Functions`
+
+---
+
+# Research Ideas
+
+Further research could focus on effects of possible future `Survival Functions`:
+
+- Effect of a living *longer* health policy (prolongation)
+- Effect of a living *healthier* policy (rectangularisation)
+
+--
+
+&lt;br&gt;
+
+Research Agenda: 
+- Formalise **Rectangularisation** and **Prolongation** mathematically
+- Derive parameters/`Survival Functions` for counterfactual scenarios
+- Compare economic model outcomes
+
+The focus is on a sound theory of `Survival Function` `shape` and empirical as well as counterfactual implementations
+
+---
+class: inverse, center, middle
+
+# Research Project 
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=960px&gt;&lt;/html&gt; 
+
+Incorporating and Dissecting **Realistic Ageing**
+
+---
+
+# Survival analysis
+
+.left-col[
+
+###  Hazard Rate / Force of Mortality (`FOM`):  
+
+`$$\mu(x)$$`
+
+]
+
+.right-col[
+
+
+
+]
+
+---
+
+# Survival analysis
+
+.left-col[
+
+###  Hazard Rate / Force of Mortality (`FOM`): 
+
+`$$\mu(x)$$`
+
+Gompertz-Makeham Implementation:
+
+`$$\mu_{GM}(x) := A + Re^{\alpha x}$$`
+
+- `\(A\)`: Background Risk
+- `\(R\)`: Initial mortality
+- `\(\alpha\)`: Speed of Ageing
+
+]
+
+.right-col[
+
+![figure](pictures/figure_intro-1.svg)
+
+]
+
+
+---
+
+# Survival analysis
+
+.left-col[
+
+
+### `Survival function`: 
+`$$S(x) := exp\left(- \int_0^\infty \mu(t) dt \right)$$`
+
+]
+
+.right-col[
+
+
+
+]
+
+
+---
+
+# Survival analysis
+
+.left-col[
+
+
+### `Survival function`: 
+`$$S(x) := exp\left(- \int_0^\infty \mu(t) dt \right)$$`
+
+Gompertz-Makheam:
+
+$$ S_{GM}(x) = \exp \left[ -Ax - \frac{R}{\alpha} (\exp(\alpha x) - 1)\right] $$
+
+]
+
+.right-col[
+
+![figure](pictures/figure_intro-2.svg)
+
+]
+
+---
+
+# Survival analysis
+
+.left-col[
+
+
+### Total life expectancy / `life span`: 
+
+$$ e(0) = \int_0^\infty S(t) dt $$
+
+Remaining `life expectancy` at `\(x\)`: 
+
+`$$e(x) = \frac{\int_x^\infty S(t) dt}{S(x)}$$`
+]
+
+
+
+.right-col[
+
+
+
+]
+
+---
+
+# Survival analysis
+
+.left-col[
+
+
+### Total life expectancy / `life span`: 
+
+$$ e(0) = \int_0^\infty S(t) dt $$
+
+Remaining `life expectancy` at `\(x\)`: 
+
+`$$e(x) = \frac{\int_x^\infty S(t) dt}{S(x)}$$`
+
+Gompertz-Makeham Implementation is most easily obtained by numerical integration (Castellares et al. 2020)
+]
+
+
+
+.right-col[
+
+![figure](pictures/figure_intro-3.svg)
+
+]
+
+
+---
+
+# Rectangularisation
+
+The `life span` of a species is (usually) **fixed**, inducing **restrictions**
+
+--
+
+Specifically in Gompertz-Makeham: *Strehler-Mildvan Correlation*
+
+`$$\ln(R_i) = \underset{\beta_0}{\underbrace{\ln(M)}} - \underset{\beta_1}{\underbrace{L}} \alpha_i$$`
+
+--
+
+Insert `Strehler-Mildvan` estimates into the `Gompertz-Makeham Law`:
+`$$\mu_i - A_i = M e^{\alpha_i (x - L)}$$`
+
+--
+
+Interpretation:
+- `\(M\)`: Common `Force of Mortality` at age `\(L\)`
+- After controlling for `Background Risk` `\(A\)`
+- `\(L\)` is subsequently defined as the `Lifespan`
+
+---
+
+# Initial mortality vs. Speed of Ageing tradeoff
+
+![](pictures/SV_correlation_a.svg)
+
+---
+
+# Initial mortality vs. Speed of Ageing tradeoff
+
+![](pictures/SV_correlation_b.svg)
+
+---
+
+name: full
+
+# Demonstration
+
+&lt;iframe src="http://127.0.0.1:5555" width="100%" height="500" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"&gt; &lt;/iframe&gt;
+
+---
+
+# Measuring Rectangularisation
+
+Wrycza et al. (2015) quantify `pace` and `shape` of `survival functions`
+
+&lt;br&gt;
+
+--
+
+Use `pace` to bring `survival functions` to a common time scale
+- Defined as average `life span` `\(e(0)\)` (which is `life expectancy`)
+- Standardise age/time: `\(x^S .= x / e(0)\)`
+- Standardise `survival function`: `\(S^S(x^s)\)`
+
+&lt;br&gt;
+
+--
+Use `shape` `\(\mathbb{S}: S^S \rightarrow \mathbb{S}(S^S)\)` to measure speed of ageing 
+- Assigns a value to each `survival function`
+- Allows inter-sepecies comparisons of ageing
+- Related to Wilmoth &amp; Horiuchis (1999) measures of rectangularisation
+
+
+---
+
+# Visual Example
+
+.center[
+![:scale 80%](pictures/pace_shape.png)
+]
+
+---
+
+# Empirical Application
+
+Gompertz-Makeham FOM: `\(\mu_{GM}(x) = A + R e^{\alpha x}\)`
+
+&lt;br&gt;
+--
+Human Mortality Database (HMD)
+  - 41 Countries
+  - Data for roughly the last 100 years
+  
+&lt;br&gt;
+--
+
+Parameter estimation (best method has to be detemined)
+  - Nonlinear Least Squares
+  - Poisson Maximum Likelihood
+
+---
+
+# Empirical Application
+
+Derive `survival functions`, `pace` and `shape` parameters
+
+Capture parametrisation for different scenarios by country:
+
+--
+
+**Scenario A**: Rectangularisation
+- Constant `life span`, but variation in `shape`:
+- Hold `\(\ln(R) = \beta_0 + \beta_1 \alpha\)` constant (Strehler-Mildvan correlation)
+
+--
+
+**Scenario B** Prolongation of `life-span`
+- Higher `life span`, but same `shape`:
+- Decrease `\(R\)` or `\(\alpha\)` 
+
+---
+
+# Thank you for your attention
+
+--
+
+### Short summary for discussion
+
+Project Agenda:
+- Use Gompertz-Makeham Model to parameterise `survival function`
+- Estimate parameters for countries in HMD
+- Derive `pace` and `shape` a la Wrycza et al. (2015)
+- Devise Scenarios based on country estimates
+
+Project output:
+- Formal theory of `survival function` `shape`
+- Parameterised scenarios
+
+---
+
+# References
+
+**Castellares et al.** (2020). *On closed-form expressions to Gompertz–Makeham life expectancy*. Theoretical Population Biology, 134, 53–60. [https://doi.org/10.1016/j.tpb.2020.04.005](https://doi.org/10.1016/j.tpb.2020.04.005)
+
+**Cervellati &amp; Sunde** (2013). *Life Expectancy, Schooling, and Lifetime Labor Supply: Theory and Evidence Revisited*. Econometrica, 81(5), 2055–2086. [https://doi.org/10.3982/ECTA11169](https://doi.org/10.3982/ECTA11169)
+
+**Hazan** (2009). *Longevity and Lifetime Labor Supply: Evidence and Implications*. Econometrica, 77(6), 1829–1863. [https://doi.org/10.3982/ECTA8107](https://doi.org/10.3982/ECTA8107)
+
+**HMD** *Human Mortality Database*. University of California, Berkeley (USA), and Max Planck
+Institute for Demographic Research (Germany). url: [http://www.mortality.org/](http://www.mortality.org/).
+
+**Wilmoth &amp; Horiuchi** (1999). *Rectangularization revisited: Variability of age at death within human populations*. Demography, 36(4), 475–495. [https://doi.org/10.2307/2648085](https://doi.org/10.2307/2648085)
+
+---
+
+# References
+
+**Wrycza et al.** (2015). *Quantifying the Shape of Aging*. PLOS ONE, 10(3), e0119163. [https://doi.org/10.1371/journal.pone.0119163](https://doi.org/10.1371/journal.pone.0119163)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"slideNumberFormat": "%current%",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
